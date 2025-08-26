@@ -1,6 +1,6 @@
 /* eslint-disable max-params */
-import type {DateComponents} from '../types/DateComponents';
-import type {DateValue} from '../types/DateValue';
+import type {DateComponents} from './types/DateComponents';
+import type {DateValue} from './types/DateValue';
 import {INVALID_DATE_STRING} from './const';
 import {getDateComponents} from './getDateComponents';
 import {fill} from './fill';
