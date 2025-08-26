@@ -1,0 +1,17 @@
+{
+    "include": [
+        "src/**/*",
+        "index.ts",
+        "tests.ts"
+    ],
+    "compilerOptions": {
+        "lib": ["esnext", "dom"],
+        "target": "esnext",
+        "outDir": "dist",
+        "moduleResolution": "node",
+        "jsx": "react-jsx",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    }
+}

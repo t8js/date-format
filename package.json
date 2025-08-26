@@ -1,0 +1,29 @@
+{
+  "name": "@t8/date-format",
+  "version": "0.1.0",
+  "description": "Locale-agnostic date formatting utilities",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx npm-run-all cleanup compile",
+    "cleanup": "node -e \"require('node:fs').rmSync('dist', {force: true, recursive: true});\"",
+    "compile": "npx npm-run-all compile:src compile:tests",
+    "compile:src": "npx esbuild index.ts --bundle --outdir=dist --platform=neutral",
+    "compile:tests": "npx esbuild tests.ts --bundle --outdir=dist --platform=neutral",
+    "prepublishOnly": "npx npm-run-all build test",
+    "preversion": "npx npm-run-all build test",
+    "test": "node dist/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t8js/date-format.git"
+  },
+  "keywords": [
+    "date",
+    "formatting"
+  ],
+  "author": "axtk",
+  "license": "ISC",
+  "dependencies": {
+    "@t8/string-format": "^1.0.0"
+  }
+}
