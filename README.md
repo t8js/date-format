@@ -2,6 +2,8 @@
 
 *Locale-agnostic date formatting utilities*
 
+This package doesn't seek to contain the knowledge about the specific date formats, but provides a flexible and concise way to construct them.
+
 ## Date formatting
 
 ```js
