@@ -1,5 +1,5 @@
-import {pad} from '@t8/string-format';
 import {DAY, HOUR, MIN, SEC} from './const';
+import {pad} from './utils/pad';
 
 const {abs, floor, sign} = Math;
 

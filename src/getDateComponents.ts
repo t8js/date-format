@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention -- for all-caps date components */
-import {pad} from '@t8/string-format';
 import type {DateComponents} from './types/DateComponents';
 import type {DateValue} from './types/DateValue';
+import {pad} from './utils/pad';
 import {MIN} from './const';
 import {getTimezone} from './getTimezone';
 import {getTimezoneOffset} from './getTimezoneOffset';

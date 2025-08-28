@@ -22,8 +22,5 @@
     "formatting"
   ],
   "author": "axtk",
-  "license": "ISC",
-  "dependencies": {
-    "@t8/string-format": "^1.0.0"
-  }
+  "license": "ISC"
 }
