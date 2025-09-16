@@ -1,3 +1,5 @@
+[![npm](https://flat.badgen.net/npm/v/@t8/date-format?labelColor=345&color=46e)](https://www.npmjs.com/package/@t8/date-format) ![Lightweight](https://flat.badgen.net/bundlephobia/minzip/@t8/date-format/?label=minzip&labelColor=345&color=46e&r=0) ![TypeScript ✓](https://flat.badgen.net/badge/TypeScript/✓?labelColor=345&color=345)
+
 # @t8/date-format
 
 *Locale-agnostic date formatting utilities*
