@@ -24,6 +24,22 @@ formatDate(-62200000000000, eraTemplate);
 // 3 BC
 ```
 
+```js
+let weekDays = 'Sun Mon Tue Wed Thu Fri Sat'.split(' ');
+let months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
+
+let shortDateFormat = {
+    template: '{WD}, {MMM} {D}',
+    transform: {
+        WD: ({weekDay}) => weekDays[weekDay],
+        MMM: ({month}) => months[month],
+    },
+};
+
+formatDate('2022-12-02T12:34:56.789', shortDateFormat);
+// Fri, Dec 2
+```
+
 ## Custom locale definition
 
 ```js
