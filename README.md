@@ -9,17 +9,17 @@ This package doesn't seek to contain the knowledge about the specific date forma
 ## Static templates
 
 ```js
-formatDate(new Date(), '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}');
+formatDate(new Date(), "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}");
 // 2022-07-19 12:34:56
 ```
 
 ## Dynamic templates
 
 ```js
-let eraTemplate = ({E}) => E === 1 ? 'AD {YE}' : '{YE} BC';
+let eraTemplate = ({ E }) => E === 1 ? "AD {YE}" : "{YE} BC";
 // {YE} stands for the unsigned year of a calendar era
 
-formatDate('2022-07-19', eraTemplate);
+formatDate("2022-07-19", eraTemplate);
 // AD 2022
 
 formatDate(-62200000000000, eraTemplate);
@@ -27,25 +27,25 @@ formatDate(-62200000000000, eraTemplate);
 ```
 
 ```js
-let weekDays = 'Sun Mon Tue Wed Thu Fri Sat'.split(' ');
-let months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
+let weekDays = "Sun Mon Tue Wed Thu Fri Sat".split(" ");
+let months = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
 
 let shortDateFormat = {
-    template: '{WD}, {MMM} {D}',
-    transform: {
-        WD: ({weekDay}) => weekDays[weekDay],
-        MMM: ({month}) => months[month],
-    },
+  template: "{WD}, {MMM} {D}",
+  transform: {
+    WD: ({ weekDay }) => weekDays[weekDay],
+    MMM: ({ month }) => months[month],
+  },
 };
 
-formatDate('2022-12-02T12:34:56.789', shortDateFormat);
+formatDate("2022-12-02T12:34:56.789", shortDateFormat);
 // Fri, Dec 2
 ```
 
 ## Custom locale definition
 
 ```js
-import {customLocale} from './customLocale';
+import { customLocale } from "./customLocale";
 
 formatDate(new Date(), customLocale.fullDate);
 // þriðjudagur 19. júlí 2022
@@ -56,39 +56,39 @@ formatDate(new Date(), customLocale.shortDate);
 
 ```js
 const customWeekDays = [
-    'sunnudagur',
-    'mánudagur',
-    'þriðjudagur',
-    'miðvikudagur',
-    'fimmtudagur',
-    'föstudagur',
-    'laugardagur',
+  "sunnudagur",
+  "mánudagur",
+  "þriðjudagur",
+  "miðvikudagur",
+  "fimmtudagur",
+  "föstudagur",
+  "laugardagur",
 ];
 
 const customMonths = [
-    'janúar',
-    'febrúar',
-    'mars',
-    'apríl',
-    'maí',
-    'júní',
-    'júlí',
-    'ágúst',
-    'september',
-    'október',
-    'nóvember',
-    'desember',
+  "janúar",
+  "febrúar",
+  "mars",
+  "apríl",
+  "maí",
+  "júní",
+  "júlí",
+  "ágúst",
+  "september",
+  "október",
+  "nóvember",
+  "desember",
 ];
 
 export const customLocale = {
-    shortDate: '{DD}.{MM}.{Y}',
-    fullDate: {
-        template: '{WD} {D}. {MMM} {Y}',
-        transform: {
-            WD: ({weekDay}) => customWeekDays[weekDay],
-            MMM: ({month}) => customMonths[month],
-        },
+  shortDate: "{DD}.{MM}.{Y}",
+  fullDate: {
+    template: "{WD} {D}. {MMM} {Y}",
+    transform: {
+      WD: ({ weekDay }) => customWeekDays[weekDay],
+      MMM: ({ month }) => customMonths[month],
     },
+  },
 };
 ```
 
@@ -96,7 +96,7 @@ export const customLocale = {
 
 ```js
 formatDuration(123456);
-// 2'03.456"
+// 2"03.456"
 ```
 
 ## List of date placeholders
