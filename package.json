@@ -24,7 +24,7 @@
     "formatting"
   ],
   "author": "axtk",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "^5.9.2"
   }
