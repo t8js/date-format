@@ -1,6 +1,6 @@
 {
   "name": "@t8/date-format",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Locale-agnostic date formatting utilities",
   "main": "dist/index.js",
   "scripts": {
