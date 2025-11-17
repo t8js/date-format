@@ -1,4 +1,4 @@
-import type { DateValue } from "./DateValue";
+import type { DateValue } from "./DateValue.ts";
 
 export type DateComponents = {
   /** Original value */

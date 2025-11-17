@@ -8,7 +8,7 @@ import {
   formatDuration,
   HOUR,
   MIN,
-} from ".";
+} from "./index.ts";
 
 let k = 0,
   failed = false;

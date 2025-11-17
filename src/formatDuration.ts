@@ -1,5 +1,5 @@
-import { DAY, HOUR, MIN, SEC } from "./const";
-import { pad } from "./utils/pad";
+import { DAY, HOUR, MIN, SEC } from "./const.ts";
+import { pad } from "./utils/pad.ts";
 
 const { abs, floor, sign } = Math;
 

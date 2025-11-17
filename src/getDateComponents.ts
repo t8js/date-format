@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/naming-convention -- for all-caps date components */
 
-import { MIN } from "./const";
-import { getTimezone } from "./getTimezone";
-import { getTimezoneOffset } from "./getTimezoneOffset";
-import { isInvalidDate } from "./isInvalidDate";
-import type { DateComponents } from "./types/DateComponents";
-import type { DateValue } from "./types/DateValue";
-import { pad } from "./utils/pad";
+import { MIN } from "./const.ts";
+import { getTimezone } from "./getTimezone.ts";
+import { getTimezoneOffset } from "./getTimezoneOffset.ts";
+import { isInvalidDate } from "./isInvalidDate.ts";
+import type { DateComponents } from "./types/DateComponents.ts";
+import type { DateValue } from "./types/DateValue.ts";
+import { pad } from "./utils/pad.ts";
 
 const { abs, floor, sign } = Math;
 

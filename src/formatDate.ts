@@ -1,11 +1,10 @@
 /* eslint-disable max-params */
-
-import { INVALID_DATE_STRING } from "./const";
-import { fill } from "./fill";
-import { getDateComponents } from "./getDateComponents";
-import { isInvalidDate } from "./isInvalidDate";
-import type { DateComponents } from "./types/DateComponents";
-import type { DateValue } from "./types/DateValue";
+import { INVALID_DATE_STRING } from "./const.ts";
+import { fill } from "./fill.ts";
+import { getDateComponents } from "./getDateComponents.ts";
+import { isInvalidDate } from "./isInvalidDate.ts";
+import type { DateComponents } from "./types/DateComponents.ts";
+import type { DateValue } from "./types/DateValue.ts";
 
 export type FormatDateTemplate =
   | string

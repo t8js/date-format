@@ -1,4 +1,4 @@
-import { escapeRegExp } from "./utils/escapeRegExp";
+import { escapeRegExp } from "./utils/escapeRegExp.ts";
 
 export type FillTransformMap<K extends string, T> = Partial<
   Record<K, (data: T) => unknown>
