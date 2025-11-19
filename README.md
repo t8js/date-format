@@ -2,13 +2,17 @@
 
 *Locale-agnostic date formatting utilities*
 
-[![npm](https://img.shields.io/npm/v/@t8/date-format?labelColor=345&color=46e)](https://www.npmjs.com/package/@t8/date-format) ![Lightweight](https://img.shields.io/bundlephobia/minzip/@t8/date-format?label=minzip&labelColor=345&color=46e&r=0)
+[![npm](https://img.shields.io/npm/v/@t8/date-format?labelColor=345&color=46e)](https://www.npmjs.com/package/@t8/date-format) ![Lightweight](https://img.shields.io/bundlephobia/minzip/@t8/date-format?label=minzip&labelColor=345&color=46e)
 
 This package doesn't seek to contain the knowledge about the specific locale-dependent date formats, but provides a flexible and concise way to construct them.
+
+Installation: `npm i @t8/date-format`
 
 ## Static templates
 
 ```js
+import { formatDate } from "@t8/date-format";
+
 formatDate(new Date(), "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}");
 // 2022-07-19 12:34:56
 ```
@@ -16,6 +20,8 @@ formatDate(new Date(), "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}");
 ## Dynamic templates
 
 ```js
+import { formatDate } from "@t8/date-format";
+
 let eraTemplate = ({ E }) => E === 1 ? "AD {YE}" : "{YE} BC";
 // {YE} stands for the unsigned year of a calendar era
 
@@ -27,6 +33,8 @@ formatDate(-62200000000000, eraTemplate);
 ```
 
 ```js
+import { formatDate } from "@t8/date-format";
+
 let weekDays = "Sun Mon Tue Wed Thu Fri Sat".split(" ");
 let months = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
 
@@ -45,6 +53,7 @@ formatDate("2022-12-02T12:34:56.789", shortDateFormat);
 ## Custom locale definition
 
 ```js
+import { formatDate } from "@t8/date-format";
 import { customLocale } from "./customLocale";
 
 formatDate(new Date(), customLocale.fullDate);
@@ -95,6 +104,8 @@ export const customLocale = {
 ## Durations
 
 ```js
+import { formatDuration } from "@t8/date-format";
+
 formatDuration(123456);
 // 2"03.456"
 ```
