@@ -1,10 +1,10 @@
-[![npm](https://flat.badgen.net/npm/v/@t8/date-format?labelColor=345&color=46e)](https://www.npmjs.com/package/@t8/date-format) ![Lightweight](https://flat.badgen.net/bundlephobia/minzip/@t8/date-format/?label=minzip&labelColor=345&color=46e&r=0) ![TypeScript ✓](https://flat.badgen.net/badge/TypeScript/✓?labelColor=345&color=345)
-
-# @t8/date-format
+# T8 Date Format
 
 *Locale-agnostic date formatting utilities*
 
-This package doesn't seek to contain the knowledge about the specific date formats, but provides a flexible and concise way to construct them.
+[![npm](https://img.shields.io/npm/v/@t8/date-format?labelColor=345&color=46e)](https://www.npmjs.com/package/@t8/date-format) ![Lightweight](https://img.shields.io/bundlephobia/minzip/@t8/date-format?label=minzip&labelColor=345&color=46e&r=0)
+
+This package doesn't seek to contain the knowledge about the specific locale-dependent date formats, but provides a flexible and concise way to construct them.
 
 ## Static templates
 
