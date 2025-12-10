@@ -6,17 +6,11 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "npx npm-run-all cleanup compile types",
-    "cleanup": "node -e \"require('node:fs').rmSync('dist', { force: true, recursive: true });\"",
-    "compile": "npx npm-run-all compile:src compile:tests",
-    "compile:src": "npx esbuild index.ts --bundle --outdir=dist --platform=neutral",
-    "compile:tests": "npx esbuild tests.ts --bundle --outdir=dist --platform=neutral",
-    "prepublishOnly": "npx npm-run-all build test",
-    "preversion": "npx npm-run-all typecheck shape build test",
-    "shape": "npx codeshape",
-    "test": "node dist/tests.js",
-    "typecheck": "tsc --noEmit",
-    "types": "tsc --emitDeclarationOnly"
+    "clean": "node -e \"require('node:fs').rmSync('dist', { force: true, recursive: true });\"",
+    "compile": "npx esbuild index.ts --bundle --outdir=dist --platform=neutral",
+    "preversion": "npx npm-run-all clean shape compile test",
+    "shape": "npx codeshape --typecheck --emit-types",
+    "test": "node tests.ts"
   },
   "repository": {
     "type": "git",
@@ -27,8 +21,5 @@
     "formatting"
   ],
   "author": "axtk",
-  "license": "MIT",
-  "devDependencies": {
-    "typescript": "^5.9.2"
-  }
+  "license": "MIT"
 }

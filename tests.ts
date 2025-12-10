@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention -- for all-caps date components */
 import {
   DAY,
   type FormatDateOptions,
