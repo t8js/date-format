@@ -1,12 +1,8 @@
 # T8 Date Format
 
-*Locale-agnostic date formatting utilities*
-
-[![npm](https://img.shields.io/npm/v/@t8/date-format?labelColor=345&color=46e)](https://www.npmjs.com/package/@t8/date-format) ![Lightweight](https://img.shields.io/bundlephobia/minzip/@t8/date-format?label=minzip&labelColor=345&color=46e)
+Locale-agnostic date formatting utilities
 
 This package doesn't seek to contain the knowledge about the specific locale-dependent date formats, but provides a flexible and concise way to construct them.
-
-Installation: `npm i @t8/date-format`
 
 ## Static templates
 
