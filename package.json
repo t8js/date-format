@@ -1,6 +1,6 @@
 {
   "name": "@t8/date-format",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Locale-agnostic date formatting utilities",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
