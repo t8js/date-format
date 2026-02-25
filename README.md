@@ -7,7 +7,7 @@ This package doesn't seek to contain the knowledge about the specific locale-dep
 ## Static templates
 
 ```js
-import { formatDate } from "@t8/date-format";
+import { formatDate } from "dateshape";
 
 formatDate(new Date(), "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}");
 // 2022-07-19 12:34:56
@@ -16,7 +16,7 @@ formatDate(new Date(), "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}");
 ## Dynamic templates
 
 ```js
-import { formatDate } from "@t8/date-format";
+import { formatDate } from "dateshape";
 
 let eraTemplate = ({ E }) => E === 1 ? "AD {YE}" : "{YE} BC";
 // {YE} stands for the unsigned year of a calendar era
@@ -29,7 +29,7 @@ formatDate(-62200000000000, eraTemplate);
 ```
 
 ```js
-import { formatDate } from "@t8/date-format";
+import { formatDate } from "dateshape";
 
 let weekDays = "Sun Mon Tue Wed Thu Fri Sat".split(" ");
 let months = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
@@ -49,7 +49,7 @@ formatDate("2022-12-02T12:34:56.789", shortDateFormat);
 ## Custom locale definition
 
 ```js
-import { formatDate } from "@t8/date-format";
+import { formatDate } from "dateshape";
 import { customLocale } from "./customLocale";
 
 formatDate(new Date(), customLocale.fullDate);
@@ -100,7 +100,7 @@ export const customLocale = {
 ## Durations
 
 ```js
-import { formatDuration } from "@t8/date-format";
+import { formatDuration } from "dateshape";
 
 formatDuration(123456);
 // 2"03.456"
