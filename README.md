@@ -1,4 +1,4 @@
-# T8 Date Format
+# dateshape
 
 Locale-agnostic date formatting utilities
 

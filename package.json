@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t8js/date-format.git"
+    "url": "git+https://github.com/axtk/dateshape.git"
   },
   "keywords": [
     "date",
