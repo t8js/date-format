@@ -9,8 +9,8 @@ import {
   MIN,
 } from "./index.ts";
 
-let k = 0,
-  failed = false;
+let k = 0;
+let failed = false;
 
 const customWeekDays = [
   "sunnudagur",
